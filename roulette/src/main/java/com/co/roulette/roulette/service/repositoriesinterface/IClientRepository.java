@@ -6,6 +6,7 @@
 package com.co.roulette.roulette.service.repositoriesinterface;
 
 import com.co.roulette.roulette.dto.ClientDto;
+import java.math.BigDecimal;
 
 /**
  *
@@ -14,4 +15,6 @@ import com.co.roulette.roulette.dto.ClientDto;
 public interface IClientRepository {
     
     Long createClient(ClientDto clientDto);
+    
+    boolean updateClientCredit(Long clientId, BigDecimal newCredit, char operation);
 }

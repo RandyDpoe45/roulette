@@ -7,11 +7,13 @@ package com.co.roulette.roulette.repositories;
 
 import com.co.roulette.roulette.model.Roulette;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
 /**
  *
  * @author randy
  */
+@Repository
 public interface RouletteCrudRepository  extends CrudRepository <Roulette,Long> {
     
 }

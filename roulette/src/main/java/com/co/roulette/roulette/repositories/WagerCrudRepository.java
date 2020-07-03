@@ -7,11 +7,14 @@ package com.co.roulette.roulette.repositories;
 
 import com.co.roulette.roulette.model.Wager;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
 /**
  *
  * @author randy
  */
+@Repository
 public interface WagerCrudRepository  extends CrudRepository <Wager,Long>{
     
+    Iterable<Wager> findByRouletteId(Long rouletteId);
 }

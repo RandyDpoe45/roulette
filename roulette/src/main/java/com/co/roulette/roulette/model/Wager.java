@@ -9,6 +9,7 @@ import java.math.BigDecimal;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.experimental.Accessors;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.redis.core.RedisHash;
 import org.springframework.data.redis.core.index.Indexed;
@@ -19,8 +20,9 @@ import org.springframework.data.redis.core.index.Indexed;
  */
 @Getter
 @Setter
-@RedisHash("Client")
+@RedisHash("Wager")
 @NoArgsConstructor
+@Accessors(chain = true)
 public class Wager {
     @Id
     private Long id;
@@ -30,4 +32,6 @@ public class Wager {
     @Indexed
     private Long rouletteId;
     private String colour;
+    private Long number;
+    private Boolean winner;
 }

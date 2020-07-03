@@ -5,10 +5,26 @@
  */
 package com.co.roulette.roulette.dto;
 
+import java.math.BigDecimal;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.experimental.Accessors;
+
 /**
  *
  * @author randy
  */
+@Getter
+@Setter
+@NoArgsConstructor
+@Accessors(chain = true)
 public class WagerDto {
-    
+    private Long id;
+    private BigDecimal value;
+    private Long clientId;
+    private Long rouletteId;
+    private String colour;
+    private Long number;
+    private Boolean winner;
 }

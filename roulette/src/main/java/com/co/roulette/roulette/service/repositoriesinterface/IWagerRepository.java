@@ -6,6 +6,7 @@
 package com.co.roulette.roulette.service.repositoriesinterface;
 
 import com.co.roulette.roulette.dto.WagerDto;
+import com.co.roulette.roulette.model.Wager;
 
 /**
  *
@@ -13,4 +14,5 @@ import com.co.roulette.roulette.dto.WagerDto;
  */
 public interface IWagerRepository {
     Boolean createWager(WagerDto wagerDto);
+    Iterable<Wager> findByRouletteId(Long rouletteId); 
 }

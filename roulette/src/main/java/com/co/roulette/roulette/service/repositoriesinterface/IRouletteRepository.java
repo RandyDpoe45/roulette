@@ -6,6 +6,8 @@
 package com.co.roulette.roulette.service.repositoriesinterface;
 
 import com.co.roulette.roulette.dto.RouletteDto;
+import com.co.roulette.roulette.model.Roulette;
+import java.util.List;
 
 /**
  *
@@ -13,6 +15,8 @@ import com.co.roulette.roulette.dto.RouletteDto;
  */
 public interface IRouletteRepository {
     
-    Long createRoulette(RouletteDto rouletteDto);
+    Long createRoulette();
     Boolean openRoulette(Long rouletteId);
+    Boolean closeRoulette(Long rouletteId);
+    Iterable<Roulette> listRoulettes();
 }
